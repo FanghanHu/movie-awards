@@ -59,6 +59,7 @@ function search(input, currentPage = 1) {
             }
         } else {
             $results.text(res.Error);
+            $nav.empty();
         }
 	});
 }
