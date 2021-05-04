@@ -142,7 +142,7 @@ async function createNomineeCard(id) {
         const runtime = res.Runtime;
 
         return $(`
-            <div class="card movie-nominee-card shadow m-3">
+            <div id="${id}" class="card movie-nominee-card shadow m-3">
                 <img
                     class="card-img-top"
                     src="${poster}"
@@ -158,7 +158,7 @@ async function createNomineeCard(id) {
                             ${plot}
                         </div>
                     </div>
-                    <button class="btn btn-danger w-100 mt-2">
+                    <button class="btn btn-danger w-100 mt-2" onclick="removeNominee('${id}')">
                         Remove
                     </button>
                 </div>
@@ -168,4 +168,11 @@ async function createNomineeCard(id) {
         showMessage(res.Error);
         return null;
     }
+}
+
+function removeNominee(id) {
+    for(let i=0; i<nominees.length; i++) {
+        if(nominees[i] === id) nominees.splice(i, 1);
+    }
+    $('#' + id).remove();
 }
