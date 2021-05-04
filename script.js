@@ -8,18 +8,18 @@ $("#search-input").on("search", function (e) {
 	const input = $searchBar.val();
 	$searchBar.val("");
 
-    //search for user input
-	const queryURL = "https://www.omdbapi.com/?s=" + input + "&apikey=" + OMDB_API_KEY;
-	search(queryURL);
+	search(input);
 });
 
-function search(queryURL) {
+function search(input, currentPage = 1) {
     $.ajax({
-		url: queryURL,
+		url: `https://www.omdbapi.com/?s=${input}&page=${currentPage}&apikey=${OMDB_API_KEY}`,
 		method: "GET",
 	}).then(res => {
         if(res.Response === "True") {
             $results.empty();
+
+            const totalPages = Math.ceil(res.totalResults / 10);
 
             for(const movie of res.Search) {
                 const poster = movie.Poster;
@@ -58,6 +58,6 @@ function nominate(btn) {
     console.log($(btn).data("id"));
 }
 
-function createPagination(query) {
-    //TODO:
+function createPagination(input, totalPages, currentPage=1) {
+
 }
