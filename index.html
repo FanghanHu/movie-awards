@@ -56,9 +56,8 @@
 						data-target="#nominees"
 						aria-expanded="false"
 						aria-controls="nominees"
-					>
-						Show
-					</button>
+                        onclick="$(this).text()==='Show'?$(this).text('Hide'):$(this).text('Show')"
+					>Show</button>
 				</div>
 				<div class="collapse" id="nominees">
 					<div class="card shadow">
