@@ -70,6 +70,7 @@ async function nominate(btn) {
         if(!nominees.includes(id)) {
             nominees.push(id);
             $nomineeList.append(await createNomineeCard(id));
+            showMessage("Movie nominated.");
         } else {
             showMessage("You have already nominated this movie.");
         }
