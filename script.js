@@ -6,6 +6,8 @@ const $nav = $("#nav");
 const $modal = $('#modal');
 const $modalText = $("#modal-text");
 
+const nominees = [];
+
 $("#search-input").on("search", function (e) {
 	const $searchBar = $(this);
 	const input = $searchBar.val();
@@ -61,9 +63,19 @@ function search(input, currentPage = 1) {
 	});
 }
 
-function nominate(btn) {
-    console.log($(btn).data("id"));
-    //TODO: add a card to nominees seaction.
+async function nominate(btn) {
+    const id = $(btn).data("id");
+
+    if(nominees.length < 5) {
+        if(!nominees.includes(id)) {
+            nominees.push(id);
+            $nomineeList.append(await createNomineeCard(id));
+        } else {
+            showMessage("You have already nominated this movie.");
+        }
+    } else {
+        showMessage("You can only nominate 5 movies.");
+    }
 }
 
 function createPagination(input, totalPages, currentPage=1) {
@@ -113,4 +125,47 @@ function createPagination(input, totalPages, currentPage=1) {
 function showMessage(message) {
     $modalText.text(message);
     $modal.modal();
+}
+
+async function createNomineeCard(id) {
+    const res = await $.ajax({
+		url: `https://www.omdbapi.com/?i=${id}&apikey=${OMDB_API_KEY}`,
+		method: "GET"
+	});
+
+    if(res.Response === "True") {
+        const poster = res.Poster.startsWith("h")?res.Poster:"http://placehold.it/200x300";
+        const title = res.Title;
+        const year = res.Year;
+        const plot = res.Plot;
+        const genre = res.Genre;
+        const runtime = res.Runtime;
+
+        return $(`
+            <div class="card movie-nominee-card shadow m-3">
+                <img
+                    class="card-img-top"
+                    src="${poster}"
+                    alt="${title}"
+                />
+                <div class="card-body custom-scrollbar">
+                    <div class="h4 card-title">${title} (${year})</div>
+                    <div class="card-text">
+                        <div class="text-muted">
+                            ${runtime} - ${genre}
+                        </div>
+                        <div class="plot">
+                            ${plot}
+                        </div>
+                    </div>
+                    <button class="btn btn-danger w-100 mt-2">
+                        Remove
+                    </button>
+                </div>
+            </div>
+        `);
+    } else {
+        showMessage(res.Error);
+        return null;
+    }
 }

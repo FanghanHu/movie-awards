@@ -62,26 +62,23 @@ body {
 
 .movie-nominee-card .card-body {
     width: 14rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
-.container {
+.custom-scrollbar {
     overflow-y: overlay;
 }
 
-.container::-webkit-scrollbar-thumb {
-    background-color: #d6dee1;
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(84,87,88,0.3);
     border-radius: 20px;
     border: 6px solid transparent;
     background-clip: content-box;
 }
 
-.container::-webkit-scrollbar-track {
+.custom-scrollbar::-webkit-scrollbar-track {
     background-color: transparent;
 }
 
-.container::-webkit-scrollbar {
+.custom-scrollbar::-webkit-scrollbar {
     width: 20px;
 }
