@@ -10,7 +10,11 @@ $("#search-input").on("search", function (e) {
 
     //search for user input
 	const queryURL = "https://www.omdbapi.com/?s=" + input + "&apikey=" + OMDB_API_KEY;
-	$.ajax({
+	search(queryURL);
+});
+
+function search(queryURL) {
+    $.ajax({
 		url: queryURL,
 		method: "GET",
 	}).then(res => {
@@ -48,8 +52,12 @@ $("#search-input").on("search", function (e) {
             $results.text(res.Error);
         }
 	});
-});
+}
 
 function nominate(btn) {
     console.log($(btn).data("id"));
+}
+
+function createPagination(query) {
+    //TODO:
 }
