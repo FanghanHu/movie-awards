@@ -23,7 +23,7 @@
 		<link href="./style.css" rel="stylesheet" />
 	</head>
 	<body>
-		<div class="container p-3">
+		<div class="container bg-white shadow p-5 vh-100">
 			<!-- headline -->
 			<header class="h1 text-center">The Movie Awards Program</header>
 			<main>
@@ -56,187 +56,156 @@
 						data-target="#nominees"
 						aria-expanded="false"
 						aria-controls="nominees"
-                        onclick="$(this).text()==='Show'?$(this).text('Hide'):$(this).text('Show')"
-					>Show</button>
+						onclick="$(this).text()==='Show'?$(this).text('Hide'):$(this).text('Show')"
+					>
+						Show
+					</button>
 				</div>
-				<div class="collapse" id="nominees">
-					<div class="card shadow">
-						<div class="card-body">
-							<div class="d-flex flex-wrap justify-content-center" id="nominee-list">
-								<div class="card movie-nominee-card shadow m-3">
-									<img
-										class="card-img-top"
-										src="https://m.media-amazon.com/images/M/MV5BMzA0YWMwMTUtMTVhNC00NjRkLWE2ZTgtOWEzNjJhYzNiMTlkXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
-										alt="pic"
-									/>
-									<div class="card-body">
-										<div class="h4 card-title">
-											Superman (1978)
-										</div>
-										<div class="card-text">
-											<div class="text-muted">
-												181 min - Action, Adventure,
-												Drama, Sci-Fi
-											</div>
-											<div class="plot">
-												An alien orphan is sent from his
-												dying planet to Earth, where he
-												grows up to become his adoptive
-												home's first and greatest
-												superhero.
-											</div>
-										</div>
-										<button class="btn btn-danger m-1 mt-3">
-											Remove
-										</button>
+				<div class="collapse mb-3" id="nominees">
+					<div
+						class="d-flex flex-wrap justify-content-center"
+						id="nominee-list"
+					>
+						<div class="card movie-nominee-card shadow m-3">
+							<img
+								class="card-img-top"
+								src="https://m.media-amazon.com/images/M/MV5BMzA0YWMwMTUtMTVhNC00NjRkLWE2ZTgtOWEzNjJhYzNiMTlkXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
+								alt="pic"
+							/>
+							<div class="card-body">
+								<div class="h4 card-title">Superman (1978)</div>
+								<div class="card-text">
+									<div class="text-muted">
+										181 min - Action, Adventure, Drama,
+										Sci-Fi
+									</div>
+									<div class="plot">
+										An alien orphan is sent from his dying
+										planet to Earth, where he grows up to
+										become his adoptive home's first and
+										greatest superhero.
 									</div>
 								</div>
+								<button class="btn btn-danger m-1 mt-3">
+									Remove
+								</button>
+							</div>
+						</div>
 
-                                <div class="card movie-nominee-card shadow m-3">
-									<img
-										class="card-img-top"
-										src="https://m.media-amazon.com/images/M/MV5BMzA0YWMwMTUtMTVhNC00NjRkLWE2ZTgtOWEzNjJhYzNiMTlkXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
-										alt="pic"
-									/>
-									<div class="card-body">
-										<div class="h4 card-title">
-											Superman (1978)
-										</div>
-										<div class="card-text">
-											<div class="text-muted">
-												181 min - Action, Adventure,
-												Drama, Sci-Fi
-											</div>
-											<div class="plot">
-												An alien orphan is sent from his
-												dying planet to Earth, where he
-												grows up to become his adoptive
-												home's first and greatest
-												superhero.
-											</div>
-										</div>
-										<button class="btn btn-danger m-1 mt-3">
-											Remove
-										</button>
+						<div class="card movie-nominee-card shadow m-3">
+							<img
+								class="card-img-top"
+								src="https://m.media-amazon.com/images/M/MV5BMzA0YWMwMTUtMTVhNC00NjRkLWE2ZTgtOWEzNjJhYzNiMTlkXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
+								alt="pic"
+							/>
+							<div class="card-body">
+								<div class="h4 card-title">Superman (1978)</div>
+								<div class="card-text">
+									<div class="text-muted">
+										181 min - Action, Adventure, Drama,
+										Sci-Fi
+									</div>
+									<div class="plot">
+										An alien orphan is sent from his dying
+										planet to Earth, where he grows up to
+										become his adoptive home's first and
+										greatest superhero.
 									</div>
 								</div>
+								<button class="btn btn-danger m-1 mt-3">
+									Remove
+								</button>
+							</div>
+						</div>
 
-                                <div class="card movie-nominee-card shadow m-3">
-									<img
-										class="card-img-top"
-										src="https://m.media-amazon.com/images/M/MV5BMzA0YWMwMTUtMTVhNC00NjRkLWE2ZTgtOWEzNjJhYzNiMTlkXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
-										alt="pic"
-									/>
-									<div class="card-body">
-										<div class="h4 card-title">
-											Superman (1978)
-										</div>
-										<div class="card-text">
-											<div class="text-muted">
-												181 min - Action, Adventure,
-												Drama, Sci-Fi
-											</div>
-											<div class="plot">
-												An alien orphan is sent from his
-												dying planet to Earth, where he
-												grows up to become his adoptive
-												home's first and greatest
-												superhero.
-											</div>
-										</div>
-										<button class="btn btn-danger m-1 mt-3">
-											Remove
-										</button>
+						<div class="card movie-nominee-card shadow m-3">
+							<img
+								class="card-img-top"
+								src="https://m.media-amazon.com/images/M/MV5BMzA0YWMwMTUtMTVhNC00NjRkLWE2ZTgtOWEzNjJhYzNiMTlkXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
+								alt="pic"
+							/>
+							<div class="card-body">
+								<div class="h4 card-title">Superman (1978)</div>
+								<div class="card-text">
+									<div class="text-muted">
+										181 min - Action, Adventure, Drama,
+										Sci-Fi
+									</div>
+									<div class="plot">
+										An alien orphan is sent from his dying
+										planet to Earth, where he grows up to
+										become his adoptive home's first and
+										greatest superhero.
 									</div>
 								</div>
+								<button class="btn btn-danger m-1 mt-3">
+									Remove
+								</button>
+							</div>
+						</div>
 
-                                <div class="card movie-nominee-card shadow m-3">
-									<img
-										class="card-img-top"
-										src="https://m.media-amazon.com/images/M/MV5BMzA0YWMwMTUtMTVhNC00NjRkLWE2ZTgtOWEzNjJhYzNiMTlkXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
-										alt="pic"
-									/>
-									<div class="card-body">
-										<div class="h4 card-title">
-											Superman (1978)
-										</div>
-										<div class="card-text">
-											<div class="text-muted">
-												181 min - Action, Adventure,
-												Drama, Sci-Fi
-											</div>
-											<div class="plot">
-												An alien orphan is sent from his
-												dying planet to Earth, where he
-												grows up to become his adoptive
-												home's first and greatest
-												superhero.
-											</div>
-										</div>
-										<button class="btn btn-danger m-1 mt-3">
-											Remove
-										</button>
+						<div class="card movie-nominee-card shadow m-3">
+							<img
+								class="card-img-top"
+								src="https://m.media-amazon.com/images/M/MV5BMzA0YWMwMTUtMTVhNC00NjRkLWE2ZTgtOWEzNjJhYzNiMTlkXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
+								alt="pic"
+							/>
+							<div class="card-body">
+								<div class="h4 card-title">Superman (1978)</div>
+								<div class="card-text">
+									<div class="text-muted">
+										181 min - Action, Adventure, Drama,
+										Sci-Fi
+									</div>
+									<div class="plot">
+										An alien orphan is sent from his dying
+										planet to Earth, where he grows up to
+										become his adoptive home's first and
+										greatest superhero.
 									</div>
 								</div>
+								<button class="btn btn-danger m-1 mt-3">
+									Remove
+								</button>
+							</div>
+						</div>
 
-                                <div class="card movie-nominee-card shadow m-3">
-									<img
-										class="card-img-top"
-										src="https://m.media-amazon.com/images/M/MV5BMzA0YWMwMTUtMTVhNC00NjRkLWE2ZTgtOWEzNjJhYzNiMTlkXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
-										alt="pic"
-									/>
-									<div class="card-body">
-										<div class="h4 card-title">
-											Superman (1978)
-										</div>
-										<div class="card-text">
-											<div class="text-muted">
-												181 min - Action, Adventure,
-												Drama, Sci-Fi
-											</div>
-											<div class="plot">
-												An alien orphan is sent from his
-												dying planet to Earth, where he
-												grows up to become his adoptive
-												home's first and greatest
-												superhero.
-											</div>
-										</div>
-										<button class="btn btn-danger m-1 mt-3">
-											Remove
-										</button>
+						<div class="card movie-nominee-card shadow m-3">
+							<img
+								class="card-img-top"
+								src="https://m.media-amazon.com/images/M/MV5BMzA0YWMwMTUtMTVhNC00NjRkLWE2ZTgtOWEzNjJhYzNiMTlkXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
+								alt="pic"
+							/>
+							<div class="card-body">
+								<div class="h4 card-title">Superman (1978)</div>
+								<div class="card-text">
+									<div class="text-muted">
+										181 min - Action, Adventure, Drama,
+										Sci-Fi
+									</div>
+									<div class="plot">
+										An alien orphan is sent from his dying
+										planet to Earth, where he grows up to
+										become his adoptive home's first and
+										greatest superhero.
 									</div>
 								</div>
+								<button class="btn btn-danger m-1 mt-3">
+									Remove
+								</button>
 							</div>
 						</div>
 					</div>
 				</div>
 
 				<!-- search results -->
-				<div id="results" class="d-flex flex-wrap justify-content-center">
-					<div class="card bg-dark text-white movie-card">
-						<img
-							src="https://m.media-amazon.com/images/M/MV5BMzE5ODEyMjEzMl5BMl5BanBnXkFtZTgwNzc4MDA3NzE@._V1_SX300.jpg"
-							alt="poster"
-							class="card-img"
-						/>
-						<div class="card-img-overlay">
-							<div class="card-body">
-								<div class="card-title">
-									Skyfest 2015: Batman vs Superman (1995)
-								</div>
-							</div>
-						</div>
-
-						<button class="remove-btn">+</button>
-					</div>
-				</div>
+				<div
+					id="results"
+					class="d-flex flex-wrap justify-content-center"
+				></div>
 			</main>
+            <nav id="nav" class="d-flex justify-content-center mt-3"></nav>
 		</div>
-
-        <nav id="nav" class="d-flex justify-content-center">
-
-        </nav>
 
 		<!-- bootstrap -->
 		<script
