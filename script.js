@@ -3,6 +3,8 @@ const OMDB_API_KEY = "b415e062";
 const $nomineeList = $("#nominee-list");
 const $results = $("#results");
 const $nav = $("#nav");
+const $modal = $('#modal');
+const $modalText = $("#modal-text");
 
 $("#search-input").on("search", function (e) {
 	const $searchBar = $(this);
@@ -106,4 +108,9 @@ function createPagination(input, totalPages, currentPage=1) {
     }
 
     return $pagination;
+}
+
+function showMessage(message) {
+    $modalText.text(message);
+    $modal.modal();
 }
