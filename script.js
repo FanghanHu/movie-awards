@@ -17,10 +17,13 @@ function search(input, currentPage = 1) {
 		method: "GET",
 	}).then(res => {
         if(res.Response === "True") {
+            //empty search section
             $results.empty();
 
+            //updage pagination
             const totalPages = Math.ceil(res.totalResults / 10);
 
+            //add moviews
             for(const movie of res.Search) {
                 const poster = movie.Poster;
                 const title = movie.Title;
@@ -56,8 +59,9 @@ function search(input, currentPage = 1) {
 
 function nominate(btn) {
     console.log($(btn).data("id"));
+    //TODO: add a card to nominees seaction.
 }
 
 function createPagination(input, totalPages, currentPage=1) {
-
+    
 }
